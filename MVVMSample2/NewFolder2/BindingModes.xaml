@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVMSample2.NewFolder2.BindingModes"
+             Visual="Material">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Placeholder="Source"
+                   x:Name="source"
+                   Text="Initial"/>
+            <Entry Placeholder="Target"
+                   Text="{Binding Source={x:Reference source},Path=Text,Mode=OneWayToSource}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

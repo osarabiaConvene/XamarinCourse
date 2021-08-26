@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVMSample2.MainPage"
+             xmlns:project="clr-namespace:MVVMSample2.NewFolder"
+             Visual="Material">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <project:Person x:Key="person" Name="Cristina"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <!--<Entry Placeholder="Your name"
+                HorizontalOptions="FillAndExpand"
+               x:Name="txtName"
+               Text="{Binding Name, Source={StaticResource person}}"/>-->
+        <Entry Placeholder="Your name"
+                HorizontalOptions="FillAndExpand"
+               Text="{Binding Name}"/>
+        <Entry Placeholder="Your phone"
+                HorizontalOptions="FillAndExpand"
+               Text="{Binding Phone}"/>
+        <Entry Placeholder="Your address"
+                HorizontalOptions="FillAndExpand"
+               Text="{Binding Address}"/>
+        <Button Text="Save Data" Clicked="Button_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
